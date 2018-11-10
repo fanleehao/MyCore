@@ -1,4 +1,4 @@
-package core_learning;
+package core_learning_1_callback;
 /** 
  * @author :fanleehao
  * @email  :fanleehao@gmail.com
@@ -10,8 +10,7 @@ public class Test {
 		// TODO Auto-generated method stub
 		Student tom = new Tom();
 		Teacher teacher = new Teacher(tom);
-		teacher.ask(teacher, tom);
-		
+		teacher.ask(teacher, tom);		
 	}
 
 }
