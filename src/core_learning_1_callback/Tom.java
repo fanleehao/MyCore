@@ -2,7 +2,7 @@ package core_learning_1_callback;
 /** 
  * @author :fanleehao
  * @email  :fanleehao@gmail.com
- * @time   :2018年11月10日 下午7:29:57 
+ * @time   :2018脛锚11脭脗10脠脮 脧脗脦莽7:29:57 
  */
 public class Tom implements Student{
 	@Override

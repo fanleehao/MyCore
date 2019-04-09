@@ -1,4 +1,4 @@
-package core_learning_8_collection;
+package core_learning_8_collection.list;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -7,32 +7,32 @@ import java.util.List;
 /** 
  * @author :fanleehao
  * @email  :fanleehao@gmail.com
- * @time   :2018Äê11ÔÂ14ÈÕ ÏÂÎç5:50:23 
+ * @time   :2018ï¿½ï¿½11ï¿½ï¿½14ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½5:50:23 
  */
-public class ListTest {
+public class ListTest2 {
 	public static void main(String[] args) {
 		ArrayList arrayList = new ArrayList<>(100);
-		//Ïß³Ì²»Í¬²½
-		//Í¬²½²Ù×÷£¬¿ÉÒÔ
+		//ï¿½ß³Ì²ï¿½Í¬ï¿½ï¿½
+		//Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		List arrayList2 = (List) Collections.synchronizedList(new ArrayList());
 		arrayList2.add(123);
 		System.out.println(arrayList2);
-		//Ìí¼ÓÔªËØÊ±£¬Ê×ÏÈÅÐ¶ÏË÷ÒýÊÇ·ñºÏ·¨£¬È»ºó¼ì²âÊÇ·ñÐèÒªÀ©ÈÝ£¬
-		//ÏÈÊ¹ÓÃArrays.copyOf,×îºóÊ¹ÓÃSystem.arraycopy·½·¨À´Íê³ÉÊý×éµÄ¸´ÖÆ
+		//ï¿½ï¿½ï¿½Ôªï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Ï·ï¿½ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Ý£ï¿½
+		//ï¿½ï¿½Ê¹ï¿½ï¿½Arrays.copyOf,ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½System.arraycopyï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½
 		arrayList.add(1);
 		arrayList.add(2);
-		//Ô­Êý¾ÝÏòºóÒÆ¶¯
+		//Ô­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½
 		arrayList.add(0, 10);
 		arrayList.get(0);
 		
-		//ArrayListµÄÄ¬ÈÏÈÝÁ¿£¬»áËæ×ÅÀ©ÈÝ¶¯Ì¬ÏòÐÂÊý×é¿½±´£¬¿ÉÒÔÔ¤¹ÀµÄ»°£¬×îºÃÏÈ¸øÒ»¸öÈÝÁ¿´óÐ¡
+		//ArrayListï¿½ï¿½Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¶ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¤ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡
 		System.out.println(arrayList);
 		int a = 10;
 		
 		
 		
 		
-		//clear¾ÍÊÇ½«ËùÓÐÔªËØÖÃÎªnull,µÈ´ýGCÊÕ¼¯À¬»ø
+		//clearï¿½ï¿½ï¿½Ç½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½Îªnull,ï¿½È´ï¿½GCï¿½Õ¼ï¿½ï¿½ï¿½ï¿½ï¿½
 		arrayList.clear();
 		
 	}

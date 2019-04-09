@@ -5,10 +5,10 @@ import org.junit.Test;
 /** 
  * @author :fanleehao
  * @email  :fanleehao@gmail.com
- * @time   :2018Äê11ÔÂ11ÈÕ ÏÂÎç12:47:11 
+ * @time   :2018ï¿½ï¿½11ï¿½ï¿½11ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½12:47:11 
  */
 public class ThreadTest2 {
-	//Ò»¿ªÊ¼Ïß³ÌÊÇinit×´Ì¬£¬½áÊøÊ±ÊÇterminated×´Ì¬
+	//Ò»ï¿½ï¿½Ê¼ï¿½ß³ï¿½ï¿½ï¿½init×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½terminated×´Ì¬
 	class t implements Runnable {
 	    private String name;
 	    public t(String name) {
@@ -20,7 +20,7 @@ public class ThreadTest2 {
 	    }
 	}
 	
-	//²âÊÔjoin£¬¸¸Ïß³ÌÔÚ×ÓÏß³ÌÔËÐÐÊ±½øÈëwaiting×´Ì¬
+	//ï¿½ï¿½ï¿½ï¿½joinï¿½ï¿½ï¿½ï¿½ï¿½ß³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß³ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½waiting×´Ì¬
 	@Test
 	public void test1() throws InterruptedException {
 	    Thread dad = new Thread(new Runnable() {
@@ -30,7 +30,7 @@ public class ThreadTest2 {
 	            System.out.println("dad init...");
 	            son.start();
 	            try {
-	                //±£Ö¤×ÓÏß³ÌÔËÐÐÍêÔÙÔËÐÐ¸¸Ïß³Ì
+	                //ï¿½ï¿½Ö¤ï¿½ï¿½ï¿½ß³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¸ï¿½ï¿½ß³ï¿½
 	                son.join();
 	                System.out.println("dad run...");
 	            } catch (InterruptedException e) {
@@ -38,14 +38,14 @@ public class ThreadTest2 {
 	            }
 	        }
 	    });
-	    //µ÷ÓÃstart£¬Ïß³Ì½øÈërunnable×´Ì¬£¬µÈ´ýÏµÍ³µ÷¶È
+	    //ï¿½ï¿½ï¿½ï¿½startï¿½ï¿½ï¿½ß³Ì½ï¿½ï¿½ï¿½runnable×´Ì¬ï¿½ï¿½ï¿½È´ï¿½ÏµÍ³ï¿½ï¿½ï¿½ï¿½
 	    dad.start();
-	    //ÔÚ¸¸Ïß³ÌÖÐ¶Ô×ÓÏß³ÌÊµÀýÊ¹ÓÃjoin£¬±£Ö¤×ÓÏß³ÌÔÚ¸¸Ïß³ÌÖ®Ç°Ö´ÐÐÍê
+	    //ï¿½Ú¸ï¿½ï¿½ß³ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ß³ï¿½Êµï¿½ï¿½Ê¹ï¿½ï¿½joinï¿½ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½ï¿½ß³ï¿½ï¿½Ú¸ï¿½ï¿½ß³ï¿½Ö®Ç°Ö´ï¿½ï¿½ï¿½ï¿½
 
 	}
 	
 	
-	//²âÊÔsleep
+	//ï¿½ï¿½ï¿½ï¿½sleep
 	@Test
 	public void test2(){
 	    Thread t1 = new Thread(new Runnable() {
@@ -60,7 +60,7 @@ public class ThreadTest2 {
 	        }
 	    });
 
-	    //Ö÷Ïß³ÌÐÝÃß¡£½øÈëtime waiting×´Ì¬
+	    //ï¿½ï¿½ï¿½ß³ï¿½ï¿½ï¿½ï¿½ß¡ï¿½ï¿½ï¿½ï¿½ï¿½time waiting×´Ì¬
 	    try {
 	        Thread.sleep(3000);
 	    } catch (InterruptedException e) {
@@ -73,16 +73,16 @@ public class ThreadTest2 {
 	
 	
 	
-	//Ïß³Ì2½øÈëblocked×´Ì¬¡£
+	//ï¿½ß³ï¿½2ï¿½ï¿½ï¿½ï¿½blocked×´Ì¬ï¿½ï¿½
 	public static void main(String[] args) {
 	    test4();
-	    Thread.yield();//½øÈërunnable×´Ì¬
+	    Thread.yield();//ï¿½ï¿½ï¿½ï¿½runnable×´Ì¬
 	}
 
-	//²âÊÔblocked×´Ì¬
+	//ï¿½ï¿½ï¿½ï¿½blocked×´Ì¬
 	public static void test4() {
 	    class A {
-	        //Ïß³Ì1»ñµÃÊµÀýËøÒÔºóÏß³Ì2ÎÞ·¨»ñµÃÊµÀýËø£¬ËùÒÔ½øÈëblocked×´Ì¬
+	        //ï¿½ß³ï¿½1ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½Ôºï¿½ï¿½ß³ï¿½2ï¿½Þ·ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô½ï¿½ï¿½ï¿½blocked×´Ì¬
 	        synchronized void run() {
 	            while (true) {
 	            	
@@ -90,7 +90,7 @@ public class ThreadTest2 {
 	            }
 	        }
 	    }
-	    A a = new A();
+	    final A a = new A();
 	    new Thread(new Runnable() {
 	        @Override
 	        public void run() {
@@ -109,24 +109,24 @@ public class ThreadTest2 {
 	}
 	
 	
-	//volatile±£Ö¤Ïß³Ì¿É¼ûÐÔ
+	//volatileï¿½ï¿½Ö¤ï¿½ß³Ì¿É¼ï¿½ï¿½ï¿½
 	volatile static int flag = 1;
-	//object×÷ÎªËø¶ÔÏó£¬ÓÃÓÚÏß³ÌÊ¹ÓÃwaitºÍnotify·½·¨
+	//objectï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß³ï¿½Ê¹ï¿½ï¿½waitï¿½ï¿½notifyï¿½ï¿½ï¿½ï¿½
 	volatile static Object o = new Object();
-	//²âÊÔwaitºÍnotify
-	//waitºó½øÈëwaiting×´Ì¬£¬±»notify½øÈëblocked£¨×èÈûµÈ´ýËøÊÍ·Å£©»òÕßrunnable×´Ì¬£¨»ñÈ¡µ½Ëø£©
+	//ï¿½ï¿½ï¿½ï¿½waitï¿½ï¿½notify
+	//waitï¿½ï¿½ï¿½ï¿½ï¿½waiting×´Ì¬ï¿½ï¿½ï¿½ï¿½notifyï¿½ï¿½ï¿½ï¿½blockedï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È´ï¿½ï¿½ï¿½ï¿½Í·Å£ï¿½ï¿½ï¿½ï¿½ï¿½runnable×´Ì¬ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public void test5() {
 	    new Thread(new Runnable() {
 	        @Override
 	        public void run() {
-	            //waitºÍnotifyÖ»ÄÜÔÚÍ¬²½´úÂë¿éÄÚÊ¹ÓÃ
+	            //waitï¿½ï¿½notifyÖ»ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½
 	            synchronized (o) {
 	                while (true) {
 	                    if (flag == 0) {
 	                        try {
 	                            Thread.sleep(2000);
 	                            System.out.println("thread1 wait");
-	                            //ÊÍ·ÅËø£¬Ïß³Ì¹ÒÆð½øÈëobjectµÄµÈ´ý¶ÓÁÐ£¬ºóÐø´úÂëÔËÐÐ
+	                            //ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß³Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½objectï¿½ÄµÈ´ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	                            o.wait();
 	                        } catch (InterruptedException e) {
 	                            e.printStackTrace();
@@ -135,13 +135,13 @@ public class ThreadTest2 {
 	                    System.out.println("thread1 run");
 	                    System.out.println("notify t2");
 	                    flag = 0;
-	                    //Í¨ÖªµÈ´ý¶ÓÁÐµÄÒ»¸öÏß³Ì»ñÈ¡Ëø
+	                    //Í¨Öªï¿½È´ï¿½ï¿½ï¿½ï¿½Ðµï¿½Ò»ï¿½ï¿½ï¿½ß³Ì»ï¿½È¡ï¿½ï¿½
 	                    o.notify();
 	                }
 	            }
 	        }
 	    }).start();
-	    //½âÊÍÍ¬ÉÏ
+	    //ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½
 	    new Thread(new Runnable() {
 	        @Override
 	        public void run() {

@@ -8,7 +8,7 @@ import java.util.TreeSet;
 /** 
  * @author :fanleehao
  * @email  :fanleehao@gmail.com
- * @time   :2019Äê1ÔÂ6ÈÕ ÏÂÎç3:38:04 
+ * @time   :2019å¹´1æœˆ6æ—¥ ä¸‹åˆ3:38:04 
  */
 public class SetTest1 {
 	public static void main(String[] args) {
@@ -32,9 +32,9 @@ public class SetTest1 {
 		
 		
 		Set<String> tSet = new TreeSet<>();
-		tSet.add("ÄãºÃ");
-		tSet.add("ÎÒ");
-		tSet.add("ºÃ");
+		tSet.add("ä½ å¥½");
+		tSet.add("æˆ‘");
+		tSet.add("å¥½");
 		for (String string : tSet) {
 			System.out.println(string);
 		}

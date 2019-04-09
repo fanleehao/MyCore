@@ -6,7 +6,7 @@ import java.io.IOException;
 /** 
  * @author :fanleehao
  * @email  :fanleehao@gmail.com
- * @time   :2018Äê11ÔÂ11ÈÕ ÉÏÎç8:30:20 
+ * @time   :2018å¹´11æœˆ11æ—¥ ä¸Šåˆ8:30:20 
  */
 public class ClassTest {
 
@@ -21,7 +21,7 @@ public class ClassTest {
 		//System.out.println(aClass.equals(bClass));
 		//System.out.println(string.equals(string2));
 		
-		//System.out.println(Class.forName("ClassTest"));   //±¨´í
+		//System.out.println(Class.forName("ClassTest"));   //æŠ¥é”™
 		Object obj = aClass.newInstance();
 		//obj = "gg";
 		System.out.println(obj.getClass());

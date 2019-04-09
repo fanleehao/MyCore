@@ -2,7 +2,7 @@ package core_learning_5_reflection;
 /** 
  * @author :fanleehao
  * @email  :fanleehao@gmail.com
- * @time   :2018Äê11ÔÂ11ÈÕ ÉÏÎç10:35:50 
+ * @time   :2018å¹´11æœˆ11æ—¥ ä¸Šåˆ10:35:50 
  */
 public class UserBean extends PersonBean implements User{
 

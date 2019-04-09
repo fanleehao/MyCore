@@ -2,7 +2,7 @@ package core_learning_1_callback;
 /** 
  * @author :fanleehao
  * @email  :fanleehao@gmail.com
- * @time   :2018Äê11ÔÂ10ÈÕ ÏÂÎç7:28:17 
+ * @time   :2018å¹´11æœˆ10æ—¥ ä¸‹åˆ7:28:17 
  */
 
 public interface Callback {

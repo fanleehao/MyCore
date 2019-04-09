@@ -5,10 +5,10 @@ import java.util.Stack;
 /** 
  * @author :fanleehao
  * @email  :fanleehao@gmail.com
- * @time   :2018Äê12ÔÂ25ÈÕ ÏÂÎç9:27:00 
+ * @time   :2018ï¿½ï¿½12ï¿½ï¿½25ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½9:27:00 
  */
 public class StackTest {
-	public static void main(String[] args) {
+	public static <E> void main(String[] args) {
 		Stack<E> stack = new Stack<>();
 	}
 }

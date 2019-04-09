@@ -5,7 +5,7 @@ import com.sun.xml.internal.bind.v2.runtime.Name;
 /** 
  * @author :fanleehao
  * @email  :fanleehao@gmail.com
- * @time   :2018Äê11ÔÂ11ÈÕ ÉÏÎç9:27:21 
+ * @time   :2018å¹´11æœˆ11æ—¥ ä¸Šåˆ9:27:21 
  */
 public class ObjectTest implements Cloneable{
 	
@@ -14,9 +14,9 @@ public class ObjectTest implements Cloneable{
 	public static void main(String[] args) throws CloneNotSupportedException {
 		// TODO Auto-generated method stub
 		Object a = new Object();
-		//¡°²»Í¬°üÖĞµÄ×ÓÀà¿ÉÒÔ·ÃÎÊ¡±£¬ÊÇÖ¸µ±Á½¸öÀà²»ÔÚÍ¬Ò»¸ö°üÖĞµÄÊ±ºò£¬¼Ì³Ğ×Ô¸¸ÀàµÄ×ÓÀàÄÚ²¿ÇÒÖ÷µ÷£¨µ÷ÓÃÕß£©Îª×ÓÀàµÄÒıÓÃÊ±²ÅÄÜ·ÃÎÊ¸¸ÀàÓÃprotectedĞŞÊÎµÄ³ÉÔ±£¨ÊôĞÔ/·½·¨£©¡£
-		//ÔÚ×ÓÀàÄÚ²¿£¬Ö÷µ÷Îª¸¸ÀàµÄÒıÓÃÊ±²¢²»ÄÜ·ÃÎÊ´ËprotectedĞŞÊÎµÄ³ÉÔ±¡££¡£¨super¹Ø¼ü×Ö³ıÍâ£©
-		//Object b = a.super.clone();//  ´íÎó
+		//â€œä¸åŒåŒ…ä¸­çš„å­ç±»å¯ä»¥è®¿é—®â€ï¼Œæ˜¯æŒ‡å½“ä¸¤ä¸ªç±»ä¸åœ¨åŒä¸€ä¸ªåŒ…ä¸­çš„æ—¶å€™ï¼Œç»§æ‰¿è‡ªçˆ¶ç±»çš„å­ç±»å†…éƒ¨ä¸”ä¸»è°ƒï¼ˆè°ƒç”¨è€…ï¼‰ä¸ºå­ç±»çš„å¼•ç”¨æ—¶æ‰èƒ½è®¿é—®çˆ¶ç±»ç”¨protectedä¿®é¥°çš„æˆå‘˜ï¼ˆå±æ€§/æ–¹æ³•ï¼‰ã€‚
+		//åœ¨å­ç±»å†…éƒ¨ï¼Œä¸»è°ƒä¸ºçˆ¶ç±»çš„å¼•ç”¨æ—¶å¹¶ä¸èƒ½è®¿é—®æ­¤protectedä¿®é¥°çš„æˆå‘˜ã€‚ï¼ï¼ˆsuperå…³é”®å­—é™¤å¤–ï¼‰
+		//Object b = a.super.clone();//  é”™è¯¯
 		
 		ObjectTest aTest = new ObjectTest();
 		System.out.println(aTest.Name);

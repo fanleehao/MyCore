@@ -1,11 +1,11 @@
-package core_learning_8_collection;
+package core_learning_8_collection.list;
 
 import java.util.Vector;
 
 /** 
  * @author :fanleehao
  * @email  :fanleehao@gmail.com
- * @time   :2018年11月14日 下午8:43:15 
+ * @time   :2018锟斤拷11锟斤拷14锟斤拷 锟斤拷锟斤拷8:43:15 
  */
 public class VectorTest {
 	
@@ -13,9 +13,9 @@ public class VectorTest {
 		Vector<Integer> vector = new Vector<>();
 		vector.add(12);
 		vector.addElement(48);
-		//vector的绝大部分方法使用了synchronized修饰，线程安全
-		//扩容可以指定定量，每次都一样；
-		//否则每次扩容一倍
+		//vector锟侥撅拷锟襟部分凤拷锟斤拷使锟斤拷锟斤拷synchronized锟斤拷锟轿ｏ拷锟竭程帮拷全
+		//锟斤拷锟捷匡拷锟斤拷指锟斤拷锟斤拷锟斤拷锟斤拷每锟轿讹拷一锟斤拷锟斤拷
+		//锟斤拷锟斤拷每锟斤拷锟斤拷锟斤拷一锟斤拷
 		System.out.println(vector);
 	}
 }

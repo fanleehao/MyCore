@@ -14,7 +14,7 @@ import java.util.ArrayList;
 /** 
  * @author :fanleehao
  * @email  :fanleehao@gmail.com
- * @time   :2018Äê11ÔÂ14ÈÕ ÏÂÎç4:33:59 
+ * @time   :2018å¹´11æœˆ14æ—¥ ä¸‹åˆ4:33:59 
  */
 public class ArrayListSerialization implements Serializable {
 	public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException {
@@ -22,12 +22,12 @@ public class ArrayListSerialization implements Serializable {
 		arrayList.add("aaa");
 		arrayList.add("BBB");
 		
-		//ĞòÁĞ»¯²Ù×÷
+		//åºåˆ—åŒ–æ“ä½œ
 		ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream("temp"));
 		objectOutputStream.writeObject(arrayList);
 		objectOutputStream.close();
 		
-		//·´ĞòÁĞ»¯
+		//ååºåˆ—åŒ–
 		ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream("temp"));
 		ArrayList arrayList2 = (ArrayList) objectInputStream.readObject();
 		System.out.println(arrayList2);

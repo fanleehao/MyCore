@@ -5,10 +5,14 @@ import java.util.Hashtable;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+import org.junit.Test;
+
+import sun.print.resources.serviceui;
+
 /** 
  * @author :fanleehao
  * @email  :fanleehao@gmail.com
- * @time   :2018年11月15日 上午8:52:21 
+ * @time   :2018脛锚11脭脗15脠脮 脡脧脦莽8:52:21 
  */
 public class HashMapTest {
 	public static void main(String[] args) {
@@ -19,12 +23,32 @@ public class HashMapTest {
 		linkedHashMap.put(1, "hello");
 		map.put("1", "a");
 		map.put("2", "a");
-//		for (String string : map.values()) {
-//			System.out.println(string);
-//		}
-		Map<String, String> map2 = new Hashtable<>();
-		map.put(null, "yyyyy");
-		map.put(null, "aaaa");
+		map.put(null, "22");
+		map.put(null, null);
+		for (String string : map.values()) {
+			System.out.println(string);
+		}
+//		Map<String, String> map2 = new Hashtable<>();
+//		map2.put(null,null);
+//		map.put(null, "aaaa");
+//		System.out.println(map.get(null));
+	}
+	
+	@Test
+	public void test1(){
+//		Object a = "hello";
+//		System.out.println(a.hashCode());
+//		int h = a.hashCode()>>>16;
+//		System.out.println(h);
+//		System.out.println(a.hashCode() ^ h);
+//		System.out.println((a.hashCode() ^ h) & 15);
+		
+		Map<String, String> map = new Hashtable<>();
+		map.put(null, "a");
+		System.out.println(map.get(null));
+		map.put(null, "ab");
+		System.out.println(map.get(null));
+		map.put(null, null);
 		System.out.println(map.get(null));
 	}
 }

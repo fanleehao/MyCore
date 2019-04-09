@@ -6,7 +6,7 @@ import java.io.IOException;
 /** 
  * @author :fanleehao
  * @email  :fanleehao@gmail.com
- * @time   :2018Äê11ÔÂ10ÈÕ ÏÂÎç8:53:18 
+ * @time   :2018å¹´11æœˆ10æ—¥ ä¸‹åˆ8:53:18 
  */
 public class Father {
 	void fun1() throws IOException{
@@ -34,8 +34,8 @@ class Son extends Father{
 	void fun1() throws IOException {
 		// TODO Auto-generated method stub
 		super.fun1();
-		//»á·¢Éú´íÎó£¬×ÓÀà±ØĞëÅ×³öÍ¬Ñù»ò×ÓÀàÒì³£
-		//·ñÔòÉÏÊömainÖĞµÄ¶àÌ¬½«ÎŞ·¨ÊµÏÖ
+		//ä¼šå‘ç”Ÿé”™è¯¯ï¼Œå­ç±»å¿…é¡»æŠ›å‡ºåŒæ ·æˆ–å­ç±»å¼‚å¸¸
+		//å¦åˆ™ä¸Šè¿°mainä¸­çš„å¤šæ€å°†æ— æ³•å®ç°
 		//throw new SQLException();
 		throw new FileNotFoundException();
 	}

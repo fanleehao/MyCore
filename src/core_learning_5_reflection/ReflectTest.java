@@ -2,7 +2,7 @@ package core_learning_5_reflection;
 /** 
  * @author :fanleehao
  * @email  :fanleehao@gmail.com
- * @time   :2018Äê11ÔÂ11ÈÕ ÉÏÎç10:16:11 
+ * @time   :2018å¹´11æœˆ11æ—¥ ä¸Šåˆ10:16:11 
  */
 
 import java.lang.reflect.Constructor;
@@ -28,36 +28,36 @@ public class ReflectTest {
 //			for (Method method : c.getMethods()) {
 //				// String name = method.getName();
 //				// System.out.println(name);
-//				// ´òÓ¡³öÁËUserBean.javaµÄËùÓĞ·½·¨ÒÔ¼°¸¸ÀàµÄ·½·¨
+//				// æ‰“å°å‡ºäº†UserBean.javaçš„æ‰€æœ‰æ–¹æ³•ä»¥åŠçˆ¶ç±»çš„æ–¹æ³•
 //			}
-			System.out.println("------¶ÀÕ¼·½·¨------");
+			System.out.println("------ç‹¬å æ–¹æ³•------");
 
 			for (Method method : c.getDeclaredMethods()) {
 				// String name = method.getName();
 				// System.out.println(name);
-				//if (method.isAnnotationPresent(Invoke.class)) { // ÅĞ¶ÏÊÇ·ñ±» @InvokeĞŞÊÎ
+				//if (method.isAnnotationPresent(Invoke.class)) { // åˆ¤æ–­æ˜¯å¦è¢« @Invokeä¿®é¥°
 					
 					if (Modifier.isStatic(method.getModifiers())) {
-						// Èç¹ûÊÇ static·½·¨
-						// ·´Éäµ÷ÓÃ¸Ã·½·¨
-						// Àà·½·¨¿ÉÒÔÖ±½Óµ÷ÓÃ£¬²»±ØÏÈÊµÀı»¯
+						// å¦‚æœæ˜¯ staticæ–¹æ³•
+						// åå°„è°ƒç”¨è¯¥æ–¹æ³•
+						// ç±»æ–¹æ³•å¯ä»¥ç›´æ¥è°ƒç”¨ï¼Œä¸å¿…å…ˆå®ä¾‹åŒ–
 						System.out.println("HHHHH");
 						method.invoke(null, "Helllo", 2);
 					} else {
-						// Èç¹û²»ÊÇÀà·½·¨£¬ĞèÒªÏÈ»ñµÃÒ»¸öÊµÀıÔÙµ÷ÓÃ·½·¨
-						// ´«Èë¹¹Ôì·½·¨ĞèÒªµÄ±äÁ¿ÀàĞÍ
+						// å¦‚æœä¸æ˜¯ç±»æ–¹æ³•ï¼Œéœ€è¦å…ˆè·å¾—ä¸€ä¸ªå®ä¾‹å†è°ƒç”¨æ–¹æ³•
+						// ä¼ å…¥æ„é€ æ–¹æ³•éœ€è¦çš„å˜é‡ç±»å‹
 						Class[] params = { String.class, long.class };
-						// »ñÈ¡¸ÃÀàÖ¸¶¨ÀàĞÍµÄ¹¹Ôì·½·¨
-						// Èç¹ûÃ»ÓĞÕâÖÖÀàĞÍµÄ·½·¨»á±¨´í
-						Constructor constructor = UserBean.class.getDeclaredConstructor(params); // »ñÈ¡²ÎÊı¸ñÊ½Îª String,long
-						// Í¨¹ı¹¹Ôì·½·¨µÄÊµÀıÀ´½øĞĞÊµÀı»¯
-						Object userBean = constructor.newInstance("wingjay", 11); // ÀûÓÃ¹¹Ôìº¯Êı½øĞĞÊµÀı»¯£¬µÃµ½
+						// è·å–è¯¥ç±»æŒ‡å®šç±»å‹çš„æ„é€ æ–¹æ³•
+						// å¦‚æœæ²¡æœ‰è¿™ç§ç±»å‹çš„æ–¹æ³•ä¼šæŠ¥é”™
+						Constructor constructor = UserBean.class.getDeclaredConstructor(params); // è·å–å‚æ•°æ ¼å¼ä¸º String,long
+						// é€šè¿‡æ„é€ æ–¹æ³•çš„å®ä¾‹æ¥è¿›è¡Œå®ä¾‹åŒ–
+						Object userBean = constructor.newInstance("wingjay", 11); // åˆ©ç”¨æ„é€ å‡½æ•°è¿›è¡Œå®ä¾‹åŒ–ï¼Œå¾—åˆ°
 																				// Object
 						if (Modifier.isPrivate(method.getModifiers())) {
-							method.setAccessible(true); // Èç¹ûÊÇ private µÄ·½·¨£¬ĞèÒª»ñÈ¡Æäµ÷ÓÃÈ¨ÏŞ
-							// Í¨¹ı¸Ã·½·¨¿ÉÒÔÉèÖÃÆä¿É¼û»òÕß²»¿É¼û£¬²»½ö¿ÉÒÔÓÃÓÚ·½·¨
+							method.setAccessible(true); // å¦‚æœæ˜¯ private çš„æ–¹æ³•ï¼Œéœ€è¦è·å–å…¶è°ƒç”¨æƒé™
+							// é€šè¿‡è¯¥æ–¹æ³•å¯ä»¥è®¾ç½®å…¶å¯è§æˆ–è€…ä¸å¯è§ï¼Œä¸ä»…å¯ä»¥ç”¨äºæ–¹æ³•
 						}					
-						method.invoke(userBean); // µ÷ÓÃ method£¬ÎŞĞë²ÎÊı	
+						method.invoke(userBean); // è°ƒç”¨ methodï¼Œæ— é¡»å‚æ•°	
 					}
 				}
 			//}

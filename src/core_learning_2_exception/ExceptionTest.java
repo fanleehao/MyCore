@@ -7,7 +7,7 @@ import java.io.IOException;
 /** 
  * @author :fanleehao
  * @email  :fanleehao@gmail.com
- * @time   :2018Äê11ÔÂ10ÈÕ ÏÂÎç8:35:07 
+ * @time   :2018å¹´11æœˆ10æ—¥ ä¸‹åˆ8:35:07 
  */
 public class ExceptionTest {
 	
@@ -17,19 +17,19 @@ public class ExceptionTest {
 //		Thread.sleep(3000);
 		//throw new IOException();
 		try {
-			System.out.println("àÅ¶î");
+			System.out.println("å—¯é¢");
 			throw new Exception();
 		} catch (Exception e) {
 			// TODO: handle exception
-			System.out.println("´¦ÀíÒì³£");
-			throw new IOException();    //µ±³öÏÖfinallyÖĞµÄreturnÊ±£¬catchÖĞÅ×³öµÄÒì³£½«ÎŞÓÃ
+			System.out.println("å¤„ç†å¼‚å¸¸");
+			throw new IOException();    //å½“å‡ºç°finallyä¸­çš„returnæ—¶ï¼Œcatchä¸­æŠ›å‡ºçš„å¼‚å¸¸å°†æ— ç”¨
 		}finally {
 			System.out.println("12345");
 			//return 1;
 		}
 	}
 	/**
-	 * Ö´ĞĞË³Ğò£ºÕı³£----³ö´í-----ÖĞ¶Ï£¬Ìø×ªÖÁÒì³£catch£¬°´Ğòmatch£¬×ÓÀàÍ¬Ê±match¸¸Àà-------finally-----½áÊø
+	 * æ‰§è¡Œé¡ºåºï¼šæ­£å¸¸----å‡ºé”™-----ä¸­æ–­ï¼Œè·³è½¬è‡³å¼‚å¸¸catchï¼ŒæŒ‰åºmatchï¼Œå­ç±»åŒæ—¶matchçˆ¶ç±»-------finally-----ç»“æŸ
 	 * @param args
 	 */
 	public static void main(String[] args){

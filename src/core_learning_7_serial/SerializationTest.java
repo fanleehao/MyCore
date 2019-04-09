@@ -16,7 +16,7 @@ import org.junit.Test;
 /** 
  * @author :fanleehao
  * @email  :fanleehao@gmail.com
- * @time   :2018Äê11ÔÂ14ÈÕ ÉÏÎç10:37:59 
+ * @time   :2018å¹´11æœˆ14æ—¥ ä¸Šåˆ10:37:59 
  */
 public class SerializationTest {
 
@@ -33,16 +33,16 @@ public class SerializationTest {
 		FileOutputStream fileout = null;
 		
 		try{
-			//½«¶ÔÏóĞ´ÈëÎÄ¼ş¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ªĞòÁĞ»¯
+			//å°†å¯¹è±¡å†™å…¥æ–‡ä»¶â€”â€”â€”â€”â€”â€”â€”â€”åºåˆ—åŒ–
 			fileout = new FileOutputStream("temp");
-			//Êä³öµ½¶ÔÏóÎÄ¼şÁ÷
+			//è¾“å‡ºåˆ°å¯¹è±¡æ–‡ä»¶æµ
 			ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileout);
 			objectOutputStream.writeObject(a);
 			fileout.close();
 			
-			//¶ÁÈ¡
+			//è¯»å–
 			filein = new FileInputStream("temp");
-			//´Ó¶ÔÏóÁ÷ÊäÈë¶ÔÏóÖĞ¶ÁÈ¡¡ª¡ª¡ª¡ª·´ĞòÁĞ»¯
+			//ä»å¯¹è±¡æµè¾“å…¥å¯¹è±¡ä¸­è¯»å–â€”â€”â€”â€”ååºåˆ—åŒ–
 			ObjectInputStream objectInputStream = new ObjectInputStream(filein);
 			A a2 = (A) objectInputStream.readObject();
 			filein.close();
@@ -62,14 +62,14 @@ public class SerializationTest {
 		B b = new B();
 		b.i = 20;
 		b.string = "BBB";
-		//½«objĞ´ÈëÎÄ¼ş
+		//å°†objå†™å…¥æ–‡ä»¶
 		FileOutputStream fileOutputStream = new FileOutputStream("temp2");
 		ObjectOutputStream obj = new ObjectOutputStream(fileOutputStream);
 		obj.writeObject(b);
 		obj.close();
 		fileOutputStream.close();
 		
-		//¶ÁÈ¡
+		//è¯»å–
 		FileInputStream fileInputStream = new FileInputStream("temp2");
 		ObjectInputStream obj2 = new ObjectInputStream(fileInputStream);
 		B b2 = (B) obj2.readObject();
@@ -77,7 +77,7 @@ public class SerializationTest {
 		fileInputStream.close();
 		
 		
-		//½á¹û½«ÎªB [i=0, string=null]
+		//ç»“æœå°†ä¸ºB [i=0, string=null]
 		System.out.println(b2);
 	}
 	
@@ -86,12 +86,12 @@ public class SerializationTest {
 }
 
 /**
- * 2018Äê11ÔÂ14ÈÕ
- * 1.Ê¹ÓÃÊµÏÖSerializable½Ó¿ÚÍê³ÉĞòÁĞ»¯
- * 2.»¹¿ÉÒÔÊ¹ÓÃExternalizable½Ó¿Ú
- * 3.Çø±ğ£ºExternalizable¼Ì³ĞÁËSerializable£¬¸Ã½Ó¿ÚÖĞ¶¨ÒåÁËÁ½¸ö³éÏó·½·¨£ºwriteExternal()ÓëreadExternal()¡£
- * µ±Ê¹ÓÃExternalizable½Ó¿ÚÀ´½øĞĞĞòÁĞ»¯Óë·´ĞòÁĞ»¯µÄÊ±ºòĞèÒª¿ª·¢ÈËÔ±ÖØĞ´writeExternal()ÓëreadExternal()·½·¨¡£
- * Èç¹ûÃ»ÓĞÔÚÕâÁ½¸ö·½·¨ÖĞ¶¨ÒåĞòÁĞ»¯ÊµÏÖÏ¸½Ú£¬ÔòÊä³öµÄÄÚÈİÎª¿Õ(ÊôĞÔÖµÎªÄ¬ÈÏ)
+ * 2018å¹´11æœˆ14æ—¥
+ * 1.ä½¿ç”¨å®ç°Serializableæ¥å£å®Œæˆåºåˆ—åŒ–
+ * 2.è¿˜å¯ä»¥ä½¿ç”¨Externalizableæ¥å£
+ * 3.åŒºåˆ«ï¼šExternalizableç»§æ‰¿äº†Serializableï¼Œè¯¥æ¥å£ä¸­å®šä¹‰äº†ä¸¤ä¸ªæŠ½è±¡æ–¹æ³•ï¼šwriteExternal()ä¸readExternal()ã€‚
+ * å½“ä½¿ç”¨Externalizableæ¥å£æ¥è¿›è¡Œåºåˆ—åŒ–ä¸ååºåˆ—åŒ–çš„æ—¶å€™éœ€è¦å¼€å‘äººå‘˜é‡å†™writeExternal()ä¸readExternal()æ–¹æ³•ã€‚
+ * å¦‚æœæ²¡æœ‰åœ¨è¿™ä¸¤ä¸ªæ–¹æ³•ä¸­å®šä¹‰åºåˆ—åŒ–å®ç°ç»†èŠ‚ï¼Œåˆ™è¾“å‡ºçš„å†…å®¹ä¸ºç©º(å±æ€§å€¼ä¸ºé»˜è®¤)
  */
 class A implements Serializable{
 	int i;
@@ -106,18 +106,18 @@ class B implements Externalizable{
 	
 	int i;
 	String string;
-	//±ØĞëº¬ÓĞÒ»¸öpublicµÄÎŞ²Î¹¹Ôìº¯Êı
+	//å¿…é¡»å«æœ‰ä¸€ä¸ªpublicçš„æ— å‚æ„é€ å‡½æ•°
 	public B() {
 		// TODO Auto-generated constructor stub
 	}
 
 	
-	//Ğ´ÈëË³ĞòºÍ¶ÁÈ¡Ë³ĞòÒªÒ»ÖÂ£¬·ñÔò±¨´í¡£
-    //¿ÉÒÔĞ´Èë¶à¸öÍ¬ÀàĞÍ±äÁ¿£¬Ë³Ğò±£³ÖÒ»ÖÂ¼´¿É¡£
+	//å†™å…¥é¡ºåºå’Œè¯»å–é¡ºåºè¦ä¸€è‡´ï¼Œå¦åˆ™æŠ¥é”™ã€‚
+    //å¯ä»¥å†™å…¥å¤šä¸ªåŒç±»å‹å˜é‡ï¼Œé¡ºåºä¿æŒä¸€è‡´å³å¯ã€‚
 	@Override
 	public void writeExternal(ObjectOutput out) throws IOException {
 		// TODO Auto-generated method stub
-		//ÎŞĞ§
+		//æ— æ•ˆ
 		//string = "BBBB";
 		
 		out.writeInt(88);

@@ -6,7 +6,7 @@ import java.util.List;
 /** 
  * @author :fanleehao
  * @email  :fanleehao@gmail.com
- * @time   :2018Äê11ÔÂ10ÈÕ ÏÂÎç10:19:26 
+ * @time   :2018å¹´11æœˆ10æ—¥ ä¸‹åˆ10:19:26 
  */
 public class GenericTest2 {
 	public static void main(String[] args) {
@@ -19,7 +19,7 @@ public class GenericTest2 {
 		list.add(box1);
 		list.add(box2);
 		list.add(box3);
-		//list.add(123);    List¼ÓÈë<Box>ºó»á³ö´í
+		//list.add(123);    ListåŠ å…¥<Box>åä¼šå‡ºé”™
 		
 		for(int i = 0; i< list.size(); i++){
 			Box<?> box = (Box<?>) list.get(i);
@@ -28,7 +28,7 @@ public class GenericTest2 {
 		}
 
 
-		//getUpperNumberData(box3);// 1 ²»·ûºÏ±ß½ç
+		//getUpperNumberData(box3);// 1 ä¸ç¬¦åˆè¾¹ç•Œ
         getUpperNumberData(box1);    // 2
         getUpperNumberData(box2); // 3
 		
@@ -37,7 +37,7 @@ public class GenericTest2 {
         System.out.println("data :" + data.getT());
     }
     
-	//ÏòÏÂ¼æÈİ£¬¼´ÎªÍ¨Åä·ûµÄ±ß½ç£¬extends»»³ÉsuperÔòÎªÉÏ½ç
+	//å‘ä¸‹å…¼å®¹ï¼Œå³ä¸ºé€šé…ç¬¦çš„è¾¹ç•Œï¼Œextendsæ¢æˆsuperåˆ™ä¸ºä¸Šç•Œ
     public static void getUpperNumberData(Box<? extends Number> data){
         System.out.println("data :" + data.getT());
     } 

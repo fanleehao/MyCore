@@ -15,13 +15,13 @@ import java.util.concurrent.FutureTask;
 /** 
  * @author :fanleehao
  * @email  :fanleehao@gmail.com
- * @time   :2018Äê11ÔÂ11ÈÕ ÉÏÎç11:15:33 
+ * @time   :2018ï¿½ï¿½11ï¿½ï¿½11ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½11:15:33 
  */
 
 
 public class ThreadTest {
 	
-	//¼Ì³Ðthread
+	//ï¿½Ì³ï¿½thread
 	@Test
 	public void test1(){
 		class A extends Thread{
@@ -33,7 +33,7 @@ public class ThreadTest {
 		A a = new A();
 		a.start();
 	}
-	//ÊµÏÖRunable½Ó¿Ú
+	//Êµï¿½ï¿½Runableï¿½Ó¿ï¿½
 	@Test
 	public void test2(){
 		class B implements Runnable{
@@ -46,11 +46,11 @@ public class ThreadTest {
 			
 		}
 		B b = new B();
-		//RunableÊµÏÖÀàÐèÒªÓÉThreadÀà°ü×°ºó²ÅÄÜÖ´ÐÐ
+		//RunableÊµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½Threadï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½
         new Thread(b).start();
 	}
 	
-	//ÓÐ·µ»ØÖµµÄÏß³Ì
+	//ï¿½Ð·ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ß³ï¿½
     @Test
     public void test3() {
         Callable callable = new Callable() {
@@ -63,7 +63,7 @@ public class ThreadTest {
                 return sum;
             }
         };
-        //ÕâÀïÒªÓÃFutureTask£¬·ñÔò²»ÄÜ¼ÓÈëThread¹¹Ôì·½·¨
+        //ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½FutureTaskï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü¼ï¿½ï¿½ï¿½Threadï¿½ï¿½ï¿½ì·½ï¿½ï¿½
         FutureTask futureTask = new FutureTask(callable);
         new Thread(futureTask).start();
         try {
@@ -75,11 +75,11 @@ public class ThreadTest {
         }
     }
 
-    //Ïß³Ì³ØÊµÏÖ
+    //ï¿½ß³Ì³ï¿½Êµï¿½ï¿½
     @Test
     public void test4() {
         ExecutorService executorService = Executors.newFixedThreadPool(5);
-        //executeÖ±½ÓÖ´ÐÐÏß³Ì
+        //executeÖ±ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ß³ï¿½
         executorService.execute(new Thread());
         executorService.execute(new Runnable() {
             @Override
@@ -87,7 +87,7 @@ public class ThreadTest {
                 System.out.println("runnable");
             }
         });
-        //submitÌá½»ÓÐ·µ»Ø½á¹ûµÄÈÎÎñ£¬ÔËÐÐÍêºó·µ»Ø½á¹û¡£
+        //submitï¿½á½»ï¿½Ð·ï¿½ï¿½Ø½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ó·µ»Ø½ï¿½ï¿½ï¿½ï¿½
         Future future = executorService.submit(new Callable<String>() {
             @Override
             public String call() throws Exception {
@@ -103,9 +103,9 @@ public class ThreadTest {
         }
 
         ArrayList<String> list = new ArrayList<>();
-        //ÓÐ·µ»ØÖµµÄÏß³Ì×é½«·µ»ØÖµ´æ½ø¼¯ºÏ
+        //ï¿½Ð·ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ß³ï¿½ï¿½é½«ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         for (int i = 0;i < 5;i ++ ) {
-            int finalI = i;
+            final int finalI = i;
             Future future1 = executorService.submit(new Callable<String>() {
                 @Override
                 public String call() throws Exception {

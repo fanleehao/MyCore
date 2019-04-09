@@ -8,7 +8,7 @@ import org.junit.Test;
 /** 
  * @author :fanleehao
  * @email  :fanleehao@gmail.com
- * @time   :2018Äê11ÔÂ10ÈÕ ÏÂÎç9:37:56 
+ * @time   :2018å¹´11æœˆ10æ—¥ ä¸‹åˆ9:37:56 
  */
 public class GenericTest {
 	
@@ -56,9 +56,10 @@ public class GenericTest {
 }
 
 class A <T, E>{
+	//private static T var; æŠ¥é”™ï¼Œé™æ€å˜é‡åªå’Œç±»æœ‰å…³
 	private T t;
 	{
-		//¾²Ì¬¹¹Ôì¿é
+		//é™æ€æ„é€ å—
 		T t1;
 	}
 	A(T t){
