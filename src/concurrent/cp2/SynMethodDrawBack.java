@@ -65,6 +65,7 @@ class SynMethodDrawBackThreadA extends Thread{
 	public SynMethodDrawBackThreadA(SynMethodDrawBackTask task) {
 		// TODO Auto-generated constructor stub
 		this.task = task;
+		
 	}
 	
 	@Override
